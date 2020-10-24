@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_random_todo_size">120dp</dimen>
+    <dimen name="pb_colleague_tasks">40dp</dimen>
+    <dimen name="margin_default">20dp</dimen>
+</resources>

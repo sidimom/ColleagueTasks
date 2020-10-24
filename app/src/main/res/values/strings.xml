@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ColleagueTasks</string>
+    <string name="button_random_todo_text">Random todo</string>
+</resources>

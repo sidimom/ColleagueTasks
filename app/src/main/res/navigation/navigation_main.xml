@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/myTasksFragment">
+
+    <fragment
+        android:id="@+id/myTasksFragment"
+        android:name="com.example.colleaguetasks.ui.fragment.MyTasksFragment"
+        android:label="fragment_my_tasks"
+        tools:layout="@layout/fragment_my_tasks" >
+        <action
+            android:id="@+id/action_myTasksFragment_to_colleagueTasksFragment"
+            app:destination="@id/colleagueTasksFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="todoName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/colleagueTasksFragment"
+        android:name="com.example.colleaguetasks.ui.fragment.ColleagueTasksFragment"
+        android:label="fragment_colleague_tasks"
+        tools:layout="@layout/fragment_colleague_tasks" >
+        <argument android:name="colleagueId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_colleagueTasksFragment_to_myTasksFragment"
+            app:destination="@id/myTasksFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>
